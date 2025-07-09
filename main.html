@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JESUS SESSION - Animated BG</title>
+  <style>
+    /* Background gradient animation */
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
+      background-size: 600% 600%;
+      animation: gradientShift 20s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #d0f0f5;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 40px;
+      text-shadow:
+        0 0 8px #4ade80,
+        0 0 20px #4ade80,
+        0 0 30px #22c55e;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 240px;
+    }
+
+    .btn {
+      padding: 15px 0;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0f2027;
+      background: linear-gradient(90deg, #22c55e, #3b82f6);
+      box-shadow:
+        0 0 10px #22c55e,
+        0 0 20px #3b82f6;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: linear-gradient(90deg, #3b82f6, #22c55e);
+      box-shadow:
+        0 0 20px #3b82f6,
+        0 0 30px #22c55e;
+      color: white;
+      transform: scale(1.08);
+      outline: none;
+    }
+
+    p.info {
+      margin-top: 40px;
+      font-size: 1rem;
+      color: #a0d8ef;
+      user-select: none;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 12px 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.3);
+      color: #76e2f1;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>JESUS SESSION</h1>
+
+  <div class="buttons">
+    <a href="/qr" class="btn" target="_blank" rel="noopener noreferrer">QR-CODE</a>
+    <a href="/pair" class="btn" target="_blank" rel="noopener noreferrer">PAIRING-CODE</a>
+    <a href="https://github.com/dawens8/JESUS-CRASH-V1/fork" class="btn" target="_blank" rel="noopener noreferrer">FORK JESUS CRASH</a>
+    <a href="https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
+
+  <p class="info">HAVE ANY ERROR? CLICK ERROR BUTTON</p>
+  <a href="https://wa.me/13058962443" class="btn" target="_blank" rel="noopener noreferrer">ERROR</a>
+
+  <footer>
+    JESUS &copy; <span id="year"></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

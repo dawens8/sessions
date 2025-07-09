@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JESUS QR PAIR - Advanced Scanner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and box-sizing */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(-45deg, #4a90e2, #3ac569, #9b59b6, #e74c3c);
+      background-size: 400% 400%;
+      animation: gradientBG 25s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* Container with subtle glass effect */
+    #content {
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        0 0 1px 1px rgba(255, 255, 255, 0.1);
+      width: 360px;
+      max-width: 95vw;
+      padding: 30px 30px 40px;
+      text-align: center;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* QR Image styling */
+    #QR-content img {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+      border-radius: 20px;
+      border: 5px solid #4fc3f7;
+      box-shadow:
+        0 0 15px #4fc3f7,
+        0 0 30px #81d4fa;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    #QR-content img:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow:
+        0 0 25px #81d4fa,
+        0 0 45px #4fc3f7;
+    }
+
+    /* Title */
+    #title-container h2 {
+      font-weight: 900;
+      font-size: 2.6rem;
+      margin-top: 25px;
+      letter-spacing: 3px;
+      text-shadow:
+        0 0 6px #fff,
+        0 0 15px #4fc3f7,
+        0 0 25px #29b6f6;
+      user-select: text;
+    }
+
+    /* Legend and description text */
+    p.legend {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      font-weight: 500;
+      text-shadow: 0 0 8px rgba(255 255 255 / 0.4);
+      user-select: text;
+    }
+
+    #description-container p#semi {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #bbdefb;
+      font-style: italic;
+      min-height: 1.5rem;
+      user-select: text;
+    }
+
+    /* Progress Bar Styling */
+    progress {
+      width: 100%;
+      height: 18px;
+      border-radius: 12px;
+      border: none;
+      appearance: none;
+      margin-top: 12px;
+      background: #263238;
+      box-shadow: inset 0 0 8px rgba(255 255 255 / 0.1);
+      overflow: hidden;
+    }
+
+    /* Webkit */
+    progress::-webkit-progress-bar {
+      background-color: transparent;
+    }
+
+    progress::-webkit-progress-value {
+      background: linear-gradient(90deg, #29b6f6, #4fc3f7);
+      border-radius: 12px;
+      transition: width 0.3s ease;
+    }
+
+    /* Firefox */
+    progress::-moz-progress-bar {
+      background: linear-gradient(90deg, #29b6f6, #4fc3f7);
+      border-radius: 12px;
+      transition: width 0.3s ease;
+    }
+
+    /* Reload Button */
+    .reload-button {
+      margin-top: 28px;
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      background-color: #2196f3;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow:
+        0 5px 15px rgba(33, 150, 243, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+      text-decoration: none;
+    }
+
+    .reload-button:hover,
+    .reload-button:focus {
+      background-color: #1976d2;
+      outline: none;
+      transform: scale(1.05);
+    }
+
+    /* Footer text with glow effect */
+    footer {
+      position: fixed;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 0.9rem;
+      color: #81d4fa;
+      text-shadow:
+        0 0 8px #81d4fa,
+        0 0 15px #29b6f6;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 400px) {
+      #content {
+        width: 95vw;
+        padding: 20px;
+      }
+
+      #QR-content img {
+        width: 90vw;
+        height: 90vw;
+      }
+
+      #title-container h2 {
+        font-size: 2rem;
+      }
+
+      .reload-button {
+        width: 100%;
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="content" role="main" aria-label="QR Code Scanner Container">
+    <section id="QR-content" aria-label="QR Code Image Container">
+      <img
+        id="qr-image"
+        src="/server"
+        alt="QR Code to scan"
+        tabindex="0"
+        aria-describedby="legend"
+        title="Scan this QR code"
+      />
+    </section>
+
+    <section id="title-container" aria-live="polite" aria-atomic="true">
+      <h2 id="main">JESUS QR PAIR</h2>
+      <p class="legend" id="legend">Scan the QR Code within 30 seconds</p>
+    </section>
+
+    <section id="description-container" aria-live="polite" aria-atomic="true">
+      <p id="semi" class="legend"></p>
+      <progress value="0" max="30" id="progressBar" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"></progress>
+    </section>
+
+    <button class="reload-button" type="button" aria-label="Reload QR code page" title="Reload QR code page" onclick="location.reload()">
+      Reload Page
+    </button>
+  </main>
+
+  <footer aria-hidden="true">Powered by DAWENS TECH</footer>
+
+  <script>
+    (function () {
+      const progressBar = document.getElementById("progressBar");
+      const mainTitle = document.getElementById("main");
+      const legend = document.getElementById("legend");
+      let timeLeft = 30;
+
+      const timer = setInterval(() => {
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          progressBar.remove();
+          mainTitle.textContent = "QR Expired!";
+          legend.textContent = "Please reload the page to get a new QR code.";
+          legend.style.color = "#ff5252";
+        } else {
+          progressBar.value = 30 - timeLeft;
+          progressBar.setAttribute("aria-valuenow", 30 - timeLeft);
+          timeLeft -= 1;
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
