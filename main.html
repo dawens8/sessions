@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JESUS SESSION - Animated BG</title>
+  <title>MKE-X MD - Animated BG</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Background gradient animation */
     @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     body {
@@ -25,11 +19,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
-      background-size: 600% 600%;
-      animation: gradientShift 20s ease infinite;
+      background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+      background-size: 400% 400%;
+      animation: gradientShift 18s ease infinite;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #d0f0f5;
+      color: #e0f7ff;
       text-align: center;
       padding: 20px;
     }
@@ -39,40 +33,46 @@
       font-weight: 900;
       margin-bottom: 40px;
       text-shadow:
-        0 0 8px #4ade80,
-        0 0 20px #4ade80,
-        0 0 30px #22c55e;
+        0 0 8px #00ffc3,
+        0 0 20px #00e1ff,
+        0 0 30px #009dff;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      width: 240px;
+      width: 280px;
     }
 
     .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       padding: 15px 0;
       border-radius: 30px;
       font-weight: 700;
       font-size: 1.1rem;
-      color: #0f2027;
-      background: linear-gradient(90deg, #22c55e, #3b82f6);
-      box-shadow:
-        0 0 10px #22c55e,
-        0 0 20px #3b82f6;
+      color: #ffffff;
+      background: linear-gradient(90deg, #00ffc3, #009dff);
+      box-shadow: 0 0 10px #00ffc3, 0 0 20px #009dff;
       text-decoration: none;
       transition: all 0.3s ease;
       user-select: none;
     }
 
+    .btn i {
+      color: #ffffff;
+      font-size: 1.3rem;
+      text-shadow: 0 0 6px #ffffff, 0 0 10px #00ffc3;
+    }
+
     .btn:hover,
     .btn:focus {
-      background: linear-gradient(90deg, #3b82f6, #22c55e);
-      box-shadow:
-        0 0 20px #3b82f6,
-        0 0 30px #22c55e;
-      color: white;
+      background: linear-gradient(90deg, #009dff, #00ffc3);
+      box-shadow: 0 0 20px #009dff, 0 0 30px #00ffc3;
+      color: #ffffff;
       transform: scale(1.08);
       outline: none;
     }
@@ -80,7 +80,7 @@
     p.info {
       margin-top: 40px;
       font-size: 1rem;
-      color: #a0d8ef;
+      color: #b0eaff;
       user-select: none;
     }
 
@@ -89,7 +89,7 @@
       padding: 12px 0;
       width: 100%;
       background-color: rgba(0,0,0,0.3);
-      color: #76e2f1;
+      color: #7de8ff;
       font-weight: 600;
       font-size: 0.9rem;
       user-select: none;
@@ -97,20 +97,20 @@
   </style>
 </head>
 <body>
-  <h1>JESUS SESSION</h1>
+  <h1>MKE-X MD SESSION</h1>
 
   <div class="buttons">
-    <a href="/qr" class="btn" target="_blank" rel="noopener noreferrer">QR-CODE</a>
-    <a href="/pair" class="btn" target="_blank" rel="noopener noreferrer">PAIRING-CODE</a>
-    <a href="https://github.com/dawens8/JESUS-CRASH-V1/fork" class="btn" target="_blank" rel="noopener noreferrer">FORK JESUS CRASH</a>
-    <a href="https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <a href="/qr" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-qrcode"></i> QR-CODE</a>
+    <a href="/pair" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i> PAIRING-CODE</a>
+    <a href="https://github.com/mKe-BOY99/MKE-X-MD/fork" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> FORK MKE-X MD</a>
+    <a href="https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
   </div>
 
   <p class="info">HAVE ANY ERROR? CLICK ERROR BUTTON</p>
-  <a href="https://wa.me/13058962443" class="btn" target="_blank" rel="noopener noreferrer">ERROR</a>
+  <a href="https://wa.me/50941350366‬" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-bug"></i> ERROR</a>
 
   <footer>
-    JESUS &copy; <span id="year"></span>
+    MKE &copy; <span id="year"></span>
   </footer>
 
   <script>
