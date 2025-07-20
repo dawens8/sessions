@@ -88,7 +88,7 @@ Thanks for using *MKE-X MD* — your session has been successfully created!
 
 *✅ Stay Updated:*  
 Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B
+https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t
 
 *💻 Source Code:*  
 Fork & explore the project on GitHub:  
