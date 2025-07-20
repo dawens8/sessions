@@ -3,317 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JESUS PAIR CODE</title>
+  <title>MKE-X MD CONNECT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* Background */
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
-      background-image: url("https://i.ibb.co/pXL9RYv/temp-image.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      color: #000;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      user-select: none;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      height: 100vh;
+      color: #fff;
       overflow: hidden;
       padding: 20px;
     }
 
-    .container {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 12px;
+    .box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 35px 25px;
       box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-      width: 320px;
-      max-width: 95vw;
-      padding: 30px 25px;
-      text-align: center;
-      position: relative;
-      perspective: 1000px;
-      transition: transform 0.5s ease;
-    }
-
-    /* Glowing Text Header */
-    h2 {
-      font-weight: 900;
-      font-size: 2rem;
-      margin: 0 0 8px;
-      color: #222;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow:
-        0 0 8px #FF6347,
-        0 0 20px #FF4500;
-    }
-
-    h6 {
-      margin-top: 0;
-      margin-bottom: 24px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #555;
-      font-style: italic;
-    }
-
-    /* Input container */
-    .input-container {
-      display: flex;
-      background: linear-gradient(45deg, #c5c5c5 0%, #ffffff 100%);
-      border-radius: 1rem;
-      padding: 0.3rem;
-      gap: 0.3rem;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .input-container input {
-      border-radius: 0.8rem 0 0 0.8rem;
-      background: #e8e8e8;
+      max-width: 360px;
       width: 100%;
-      padding: 1rem;
-      border: none;
-      border-left: 2px solid #ff9d9d;
-      color: #5e5e5e;
-      font-size: 1rem;
-      font-weight: 600;
-      transition: all 0.2s ease-in-out;
-      user-select: text;
-      outline-offset: 2px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .input-container input:focus {
-      border-left-color: #ff6f61;
-      outline: none;
-      box-shadow: 0 0 5px #ff6f61;
-    }
-
-    .input-container button {
-      flex-basis: 25%;
-      padding: 1rem;
-      background: linear-gradient(135deg, #8a2be2 0%, #800080 100%);
-      font-weight: 900;
-      letter-spacing: 0.3rem;
-      text-transform: uppercase;
-      color: white;
-      border: none;
-      border-radius: 0 1rem 1rem 0;
-      cursor: pointer;
-      font-size: 1rem;
-      user-select: none;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .input-container button:hover,
-    .input-container button:focus {
-      background: linear-gradient(135deg, #A8E4A0 0%, #32CD32 100%);
-      color: #b22222;
-      outline: none;
-      box-shadow: 0 0 10px #32CD32;
-      transform: scale(1.05);
-    }
-
-    /* Waiting message & pair code */
-    #waiting-message {
-      display: none;
-      margin-top: 20px;
-      font-weight: 700;
-      color: #444;
-      font-size: 1rem;
-    }
-
-    #pair {
-      margin-top: 30px;
-      font-weight: 800;
-      font-size: 1.3rem;
-      cursor: pointer;
-      color: #d32f2f;
-      user-select: text;
-      transition: color 0.3s ease;
-    }
-
-    #pair:hover {
-      color: #ff6f61;
-    }
-
-    /* Glowing footer text */
-    .glowing-text {
-      margin-top: 30px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #222;
-      user-select: none;
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
       letter-spacing: 2px;
-      text-shadow:
-        0 0 5px #FF0000,
-        0 0 10px #FF0000,
-        0 0 15px #FF4500,
-        0 0 20px #FF4500,
-        0 0 25px #FF6347,
-        0 0 30px #FF6347;
-      animation: glow 3s infinite alternate;
+      text-shadow: 0 0 12px #00ffe0;
     }
 
-    @keyframes glow {
-      0% {
-        text-shadow:
-          0 0 5px #FF0000,
-          0 0 10px #FF0000,
-          0 0 15px #FF4500,
-          0 0 20px #FF4500,
-          0 0 25px #FF6347,
-          0 0 30px #FF6347;
-      }
-      50% {
-        text-shadow:
-          0 0 5px #32CD32,
-          0 0 10px #32CD32,
-          0 0 15px #32CD32,
-          0 0 20px #7CFC00,
-          0 0 25px #ADFF2F,
-          0 0 30px #ADFF2F;
-      }
-      100% {
-        text-shadow:
-          0 0 5px #1E90FF,
-          0 0 10px #1E90FF,
-          0 0 15px #00BFFF,
-          0 0 20px #00BFFF,
-          0 0 25px #87CEFA,
-          0 0 30px #87CEFA;
-      }
+    p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 25px;
     }
 
-    /* Responsive */
-    @media (max-width: 400px) {
-      .container {
-        width: 95vw;
-        padding: 20px;
-      }
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      outline: none;
+      background: #1a1a2e;
+      color: #fff;
+    }
 
-      h2 {
-        font-size: 1.6rem;
-      }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-      .input-container button {
-        font-size: 0.9rem;
-        letter-spacing: 0.15rem;
-      }
+    button:hover {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+    }
 
-      #pair {
-        font-size: 1.1rem;
-      }
+    .response {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #00ffcc;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #aaa;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.3);
+      color: #00ffe0;
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main" aria-label="Jesus Pair Code input form">
-    <h2>JESUS PAIR</h2>
-    <h6>⚙ Enter your number with country code ⚙</h6>
-    <div class="input-container">
-      <input
-        type="tel"
-        id="number"
-        name="number"
-        placeholder="e.g. +1305XXXXXXXX"
-        aria-label="Enter phone number with country code"
-        autocomplete="tel"
-        pattern="^\+?[0-9\s\-]{10,15}$"
-        required
-        inputmode="tel"
-      />
-      <button id="submit" aria-describedby="waiting-message" aria-live="polite">ENTER</button>
+  <div class="box">
+    <h1>MKE-X MD CONNECT</h1>
+    <p>Enter your number to get connected</p>
+    <input type="tel" id="numInput" placeholder="+509xxxxxxxx" />
+    <button onclick="getCode()">GET CODE</button>
+    <div class="response" id="responseBox"></div>
+
+    <div class="social-icons">
+      <a href="https://t.me/mr_dawens" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://github.com/DawensDev" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.tiktok.com/GIRLHEADSHOT" target="_blank"><i class="fab fa-tiktok"></i></a>
     </div>
-    <a id="waiting-message" role="status" aria-live="polite">in process...</a>
-    <main id="pair" tabindex="0" aria-label="Your pair code will appear here. Click to copy"></main>
-    <div class="glowing-text" aria-hidden="true">Powered By DAWENS TECH</div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <div class="footer">© 2025 MKE TECH - All Rights Reserved</div>
+
   <script>
-    const pairEl = document.getElementById("pair");
-    const submitBtn = document.getElementById("submit");
-    const numberInput = document.getElementById("number");
-    const waitingMsg = document.getElementById("waiting-message");
+    function getCode() {
+      const number = document.getElementById("numInput").value.trim();
+      const responseBox = document.getElementById("responseBox");
 
-    function formatNumber(value) {
-      // Basic formatting: add space after country code and after 3 digits
-      let digits = value.replace(/\D/g, "");
-      if (digits.length <= 3) return "+" + digits;
-      if (digits.length <= 6) return "+" + digits.slice(0, 3) + " " + digits.slice(3);
-      return "+" + digits.slice(0, 3) + " " + digits.slice(3, 6) + " " + digits.slice(6);
-    }
-
-    async function copyToClipboard(text) {
-      try {
-        await navigator.clipboard.writeText(text);
-        pairEl.textContent = "COPIED!";
-        pairEl.style.color = "#007700";
-        setTimeout(() => {
-          pairEl.textContent = text;
-          pairEl.style.color = "#d32f2f";
-        }, 1500);
-      } catch (err) {
-        alert("Failed to copy text: " + err);
-      }
-    }
-
-    submitBtn.addEventListener("click", async (e) => {
-      e.preventDefault();
-      const rawNumber = numberInput.value.trim();
-      if (!rawNumber) {
-        pairEl.textContent = "❗ Enter your WhatsApp number with country code.";
-        pairEl.style.color = "#000";
+      if (!number.match(/^\+?[0-9]{10,15}$/)) {
+        responseBox.innerText = "Invalid number format.";
+        responseBox.style.color = "#ff4b4b";
         return;
       }
 
-      // Validate number length loosely
-      let digitsOnly = rawNumber.replace(/\D/g, "");
-      if (digitsOnly.length < 11) {
-        pairEl.textContent = "❌ Invalid number format.";
-        pairEl.style.color = "#000";
-        return;
-      }
+      responseBox.innerText = "Fetching code...";
+      responseBox.style.color = "#00ffe0";
 
-      // Format input value nicely
-      numberInput.value = formatNumber(rawNumber);
-
-      // Show waiting message
-      waitingMsg.style.display = "inline";
-      pairEl.textContent = "";
-
-      try {
-        // Call API endpoint (assumed existing)
-        const response = await axios.get(`/code?number=${digitsOnly}`);
-        const code = response.data.code || "Service Unavailable";
-        waitingMsg.style.display = "none";
-        pairEl.innerHTML = `<span id="copy" role="button" tabindex="0" aria-pressed="false" style="cursor:pointer;color:#d32f2f;font-weight:bold;">CODE: <span>${code}</span></span>`;
-      } catch (error) {
-        waitingMsg.style.display = "none";
-        pairEl.textContent = "❌ Error fetching code. Try again later.";
-        pairEl.style.color = "#000";
-      }
-    });
-
-    pairEl.addEventListener("click", () => {
-      const copyText = pairEl.textContent.replace("CODE: ", "").trim();
-      if (copyText && copyText !== "COPIED!") {
-        copyToClipboard(copyText);
-      }
-    });
-
-    // Accessibility: allow keyboard copy with Enter or Space
-    pairEl.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        pairEl.click();
-      }
-    });
+      // Simulate API call
+      setTimeout(() => {
+        const code = Math.floor(100000 + Math.random() * 900000);
+        responseBox.innerHTML = `Your Code: <strong>${code}</strong>`;
+      }, 1500);
+    }
   </script>
 </body>
 </html>
