@@ -1,20 +1,21 @@
-# Use official Node.js image
-FROM node:20-buster
+FROM node:lts-buster
 
-# Set the working directory inside the container
-WORKDIR /app
+RUN apt-get update && \
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
+  
+WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json to the container
-COPY package*.json ./
+COPY package.json .
 
-# Install the application dependencies
-RUN npm install && npm install -g pm2
+RUN npm install && npm install -g qrcode-terminal pm2
 
-# Copy the rest of the application files into the container
 COPY . .
 
-# Expose the port your app will be running on
-EXPOSE 8000
+EXPOSE 5000
 
-# Command to run the app
 CMD ["npm", "start"]
