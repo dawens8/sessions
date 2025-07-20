@@ -70,11 +70,11 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "JESUS~CRASH~V1~" + string_session;
+                        let md = "MKE~X~MD~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hey there, JESUS-CRASH-V1 User!* 👋🏻
+                        let desc = `*Hey there, MKE-X MD User!* 👋🏻
 
-Thanks for using *JESUS-CRASH-V1* — your session has been successfully created!
+Thanks for using *MKE-X MD* — your session has been successfully created!
 
 🔐 *Session ID:* Sent above  
 ⚠️ *Keep it safe!* Do NOT share this ID with anyone.
@@ -83,22 +83,22 @@ Thanks for using *JESUS-CRASH-V1* — your session has been successfully created
 
 *✅ Stay Updated:*  
 Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B
+https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t
 
 *💻 Source Code:*  
 Fork & explore the project on GitHub:  
-https://github.com/dawens8/JESUS-CRASH-V1
+https://github.com/mKe-BOY99/MKE-X-MD
 
 ——————
 
-> *© Powered by DAWENS TECH*
+> *© Powered by MKE BOY TECH*
 Stay cool and hack smart. ✌🏻`;
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "jesus-crash-v1 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉",
-thumbnailUrl: "https://files.catbox.moe/bqs70b.jpg",
+title: "MKE-X MD 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉",
+thumbnailUrl: " https://files.catbox.moe/z4do8f.jpeg",
 sourceUrl: "https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B",
 mediaType: 1,
 renderLargerThumbnail: true
