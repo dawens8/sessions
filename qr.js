@@ -20,7 +20,7 @@ function removeFile(FilePath) {
 router.get('/', async (req, res) => {
     const id = makeid();
  //   let num = req.query.number;
-    async function MALVIN_XD_PAIR_CODE() {
+    async function GIFTED_MD_PAIR_CODE() {
         const {
             state,
             saveCreds
@@ -70,36 +70,16 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "MKE~X~MD~" + string_session;
+                        let md = "VAJIRA-MD=" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hey there, MKE-X MD User!* 👋🏻
-
-Thanks for using *MKE-X MD* — your session has been successfully created!
-
-🔐 *Session ID:* Sent above  
-⚠️ *Keep it safe!* Do NOT share this ID with anyone.
-
-——————
-
-*✅ Stay Updated:*  
-Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t
-
-*💻 Source Code:*  
-Fork & explore the project on GitHub:  
-https://github.com/mKe-BOY99/MKE-X-MD
-
-——————
-
-> *© Powered by MKE BOY TECH*
-Stay cool and hack smart. ✌🏻`;
+                        let desc = `*𝙳𝚘𝚗𝚝 𝚜𝚑𝚊𝚛𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚠𝚒𝚝𝚑 𝚊𝚗𝚢𝚘𝚗𝚎!! 𝚄𝚜𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚝𝚘 𝚌𝚛𝚎𝚊𝚝𝚎 𝙿𝚒𝚗𝚔𝚅𝚎𝚗𝚘𝚖-𝙼𝙳 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙 𝚄𝚜𝚎𝚛 𝚋𝚘𝚝.*\n\n ◦ *Github:* https://github.com/ayooh-us/Pink-Venom-MD`;
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "MKE-X MD 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉",
-thumbnailUrl: " https://files.catbox.moe/z4do8f.jpeg",
-sourceUrl: "https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B",
+title: "ᴠᴀᴊɪʀᴀ-ᴍᴅ",
+thumbnailUrl: "https://telegra.ph/file/e069027c2178e2c7475c9.jpg",
+sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -108,32 +88,14 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Hey there, JESUS-CRASH-V1 User!* 👋🏻
-
-Thanks for using *JESUS-CRASH-V1* — your session has been successfully created!
-
-🔐 *Session ID:* Sent above  
-⚠️ *Keep it safe!* Do NOT share this ID with anyone.
-
-——————
-
-*✅ Stay Updated:*  
-Join our official WhatsApp Channel:  
-https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B
-
-*💻 Source Code:*  
-Fork & explore the project on GitHub:  
-https://github.com/dawens8/JESUS-CRASH-V1
-
-> *© Powered by Malvin King*
-Stay cool and hack smart. ✌🏻*`;
+                            let desc = `*𝙳𝚘𝚗𝚝 𝚜𝚑𝚊𝚛𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚠𝚒𝚝𝚑 𝚊𝚗𝚢𝚘𝚗𝚎!! 𝚄𝚜𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚝𝚘 𝚌𝚛𝚎𝚊𝚝𝚎 𝚅𝙰𝙹𝙸𝚁𝙰-𝙼𝙳 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙 𝚄𝚜𝚎𝚛 𝚋𝚘𝚝.*\n\n ◦ *Github:* https://github.com/VajiraTech/VAJIRA-MD`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "jesus-crash-v1 𝕮𝖔𝖓𝖓𝖊𝖈𝖙𝖊𝖉 ✅  ",
-thumbnailUrl: "https://files.catbox.moe/bqs70b.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029VbCHd5V1dAw132PB7M1B",
+title: "ᴠᴀᴊɪʀᴀ-ᴍᴅ",
+thumbnailUrl: "https://telegra.ph/file/e069027c2178e2c7475c9.jpg",
+sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
@@ -150,7 +112,7 @@ showAdAttribution: true
                     process.exit();
                 } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10);
-                    MALVIN_XD_PAIR_CODE();
+                    GIFTED_MD_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -161,7 +123,7 @@ showAdAttribution: true
             }
         }
     }
-    await MALVIN_XD_PAIR_CODE();
+    await GIFTED_MD_PAIR_CODE();
 });
 setInterval(() => {
     console.log("☘️ 𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗶𝗻𝗴 𝗽𝗿𝗼𝗰𝗲𝘀𝘀...");
