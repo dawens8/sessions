@@ -1,22 +1,20 @@
-FROM node:lts-bookworm
+# Use official Node.js image
+FROM node:20-buster
 
-RUN apt-get update && \
-  apt-get install -y \
-    ffmpeg \
-    imagemagick \
-    libwebp-tools && \
-  apt-get upgrade -y && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/*
+# Set the working directory inside the container
+WORKDIR /app
 
-WORKDIR /usr/src/app
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
-COPY package.json .
+# Install the application dependencies
+RUN npm install && npm install -g pm2
 
-RUN npm install && npm install -g qrcode-terminal pm2
-
+# Copy the rest of the application files into the container
 COPY . .
 
-EXPOSE 5000
+# Expose the port your app will be running on
+EXPOSE 8000
 
+# Command to run the app
 CMD ["npm", "start"]
