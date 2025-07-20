@@ -1,13 +1,14 @@
-FROM node:lts-buster
+FROM node:lts-bookworm
 
 RUN apt-get update && \
   apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
+    ffmpeg \
+    imagemagick \
+    libwebp-tools && \
   apt-get upgrade -y && \
+  apt-get clean && \
   rm -rf /var/lib/apt/lists/*
-  
+
 WORKDIR /usr/src/app
 
 COPY package.json .
