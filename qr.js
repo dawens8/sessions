@@ -85,8 +85,8 @@ text: desc,
 contextInfo: {
 externalAdReply: {
 title: "MKE BOY TECH",
-thumbnailUrl: "https://files.catbox.moe/dupytm.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb5U5AI3wtb8r6Gbex2p",
+thumbnailUrl: "https://files.catbox.moe/z4do8f.jpeg",
+sourceUrl: "https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -108,8 +108,8 @@ text: desc,
 contextInfo: {
 externalAdReply: {
 title: " MKE BOY TECH  ",
-thumbnailUrl: "https://files.catbox.moe/dupytm.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb5U5AI3wtb8r6Gbex2p",
+thumbnailUrl: "https://files.catbox.moe/z4do8f.jpeg",
+sourceUrl: "https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
