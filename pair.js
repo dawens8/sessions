@@ -75,15 +75,29 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "MKE~X~MD=" + string_session;
+                        let md = "MKE~X~MD~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*𝙳𝚘𝚗𝚝 𝚜𝚑𝚊𝚛𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚠𝚒𝚝𝚑 𝚊𝚗𝚢𝚘𝚗𝚎!! 𝚄𝚜𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚝𝚘 𝚌𝚛𝚎𝚊𝚝𝚎 MKE-X MD 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙 𝚄𝚜𝚎𝚛 𝚋𝚘𝚝.*\n\n ◦ *Github:* https://github.com/mKe-BOY99/MKE-X-MD`; 
+                        let desc = `*Hello there MKE-X-MD User! 👋🏻* 
+
+> Do not share your session id with your gf 😂.
+
+ *Thanks for using MKE-X-MD* 
+
+> Join WhatsApp Channel :- ⤵️
+ 
+https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t 
+
+Dont forget to fork the repo ⬇️
+
+https://github.com/mKe-BOY99/MKE-X-MD
+
+> *© Powered BY MKE-BOY TECH*`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "MKE-X MD",
-thumbnailUrl: "https://telegra.ph/file/e069027c2178e2c7475c9.jpg",
+title: "MKE-BOY",
+thumbnailUrl: "https://files.catbox.moe/z4do8f.jpeg",
 sourceUrl: "https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t",
 mediaType: 1,
 renderLargerThumbnail: true
@@ -93,13 +107,13 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*𝙳𝚘𝚗𝚝 𝚜𝚑𝚊𝚛𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚠𝚒𝚝𝚑 𝚊𝚗𝚢𝚘𝚗𝚎!! 𝚄𝚜𝚎 𝚝𝚑𝚒𝚜 𝚌𝚘𝚍𝚎 𝚝𝚘 𝚌𝚛𝚎𝚊𝚝𝚎 𝚅𝙰𝙹𝙸𝚁𝙰-𝙼𝙳 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙 𝚄𝚜𝚎𝚛 𝚋𝚘𝚝.*\n\n ◦ *Github:* https://github.com/ayooh-us/Pink-Venom-MD`;
+                            let desc = `*Don't Share with anyone this code use for deploy MKE-X-MD*\n\n ◦ *Github:* https://github.com/mKe-BOY99/MKE-X-MD`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "MKE-X MD",
-thumbnailUrl: "https://telegra.ph/file/e069027c2178e2c7475c9.jpg",
+title: "mke-boy-tech-bot",
+thumbnailUrl: "https://files.catbox.moe/z4do8f.jpeg",
 sourceUrl: "https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t",
 mediaType: 2,
 renderLargerThumbnail: true,
