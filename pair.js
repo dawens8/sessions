@@ -13,7 +13,7 @@ function removeFile(FilePath) {
 router.get('/', async (req, res) => {
     const id = makeid();
     let num = req.query.number;
-    async function GIFTED_MD_PAIR_CODE() {
+    async function PRINCE_JUNIOR_V2_PAIR_CODE() {
         const {
             state,
             saveCreds
@@ -77,28 +77,20 @@ var randomItem = selectRandomItem(items);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
                         let md = "MKE~X~MD~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there MKE-X-MD User! 👋🏻* 
-
-> Do not share your session id with your gf 😂.
-
- *Thanks for using MKE-X-MD* 
-
-> Join WhatsApp Channel :- ⤵️
- 
-https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t 
-
-Dont forget to fork the repo ⬇️
-
-https://github.com/mKe-BOY99/MKE-X-MD
-
-> *© Powered BY MKE-BOY TECH*`; 
+                        let desc = `                    
+╔═════════════════
+║ *SESSION CONNECTED*         
+╠═════════════════
+║ *© MKE BOY TECH*         
+╚═════════════════
+`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "MKE-BOY",
+title: "MKE BOY TECH",
 thumbnailUrl: "https://files.catbox.moe/z4do8f.jpeg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t",
+sourceUrl: "https://chat.whatsapp.com/CqEHcMf8ZZwEuyj8k0X8JV?mode=r_t",
 mediaType: 1,
 renderLargerThumbnail: true
 }  
@@ -107,14 +99,14 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploy MKE-X-MD*\n\n ◦ *Github:* https://github.com/mKe-BOY99/MKE-X-MD`;
+                            let desc = `*Don't Share with anyone this code use for deploying*\n\n ◦ *Github:* https://github.com/mKe-BOY99/MKE-X-MD`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
-title: "mke-boy-tech-bot",
+title: "MKE BOY TECH",
 thumbnailUrl: "https://files.catbox.moe/z4do8f.jpeg",
-sourceUrl: "https://whatsapp.com/channel/0029Vb6JYQ81noz7JAjOlg0t",
+sourceUrl: "https://chat.whatsapp.com/CqEHcMf8ZZwEuyj8k0X8JV?mode=r_t",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
@@ -131,7 +123,7 @@ showAdAttribution: true
                     process.exit();
                 } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10);
-                    GIFTED_MD_PAIR_CODE();
+                    PRINCE_JUNIOR_V2_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -142,7 +134,7 @@ showAdAttribution: true
             }
         }
     }
-   return await GIFTED_MD_PAIR_CODE();
+   return await PRINCE_JUNIOR_V2_PAIR_CODE();
 });/*
 setInterval(() => {
     console.log("☘️ 𝗥𝗲𝘀𝘁𝗮𝗿𝘁𝗶𝗻𝗴 𝗽𝗿𝗼𝗰𝗲𝘀𝘀...");
