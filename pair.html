@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MKE-MD PAIR CODE</title>
+  <title>MKE-X-MD-PAIR</title>
   <link rel="stylesheet" href="css/all.min.css">
   <style>
     body {
@@ -11,7 +11,7 @@
       height: 100vh;
       margin: 0;
       background-image: url("https://files.catbox.moe/z4do8f.jpeg"); /* Set the background image */
-      background-repeat: no-repeat;
+      background-repeat: repeat;
       background-position: center;
       background-size: cover;
       font-family: Arial, sans-serif;
@@ -169,10 +169,10 @@
         <div id="text">
           <i class="fa fa-user"></i>
           <p>
-            <h2 class="centered-text">MKE-MD PAIR</h2>           
-            <h6>⚙Enter your number with country code.⚙</h6>
+            <h2 class="centered-text"> MKE-X-MD PAIR</h2>           
+            <h6>Enter your number with country code.</h6>
             <div class="input-container">
-              <input placeholder="509413****" type="number" id="number" placeholder="⚙Enter your phone number with country code⚙" name="">
+              <input placeholder="50938091691" type="number" id="number" placeholder="Enter your phone number with country code" name="">
               <button id="submit">enter</button>
             </div>
            
@@ -184,7 +184,7 @@
         </div>
       </div>
     </div>
-    <div class="glowing-text">Powered By MKE-BOY</div>
+    <div class="glowing-text">POWERED BY MKE BOY</div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
   <script>
@@ -231,7 +231,7 @@
         c.type = "text";
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
-        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait🔎 </a><br><br>';
+        a.innerHTML = '<a style="color:black;font-weight:bold">Please wait </a><br><br>';
         let { data } = await axios(`/code?number=${bc}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:black;font-weight:bold">' + code + '</span></font><br><br><br>';
@@ -239,4 +239,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
