@@ -4,9 +4,8 @@
             crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MKE-MD QR SCANER</title>
+    <title>MKE-X-MD QR SCANNER</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&amp;display=swap" rel="stylesheet">
-    <title>QR</title>
     <style>
         .bg {
             width: 100%;
@@ -144,7 +143,7 @@
         }
     </style>
     <script>
-        var timeleft = 200;
+        var timeleft = 30;
         var downloadTimer = setInterval(function () {
             if (timeleft <= 0) {
                 clearInterval(downloadTimer);
@@ -152,7 +151,7 @@
                 document.getElementById("main").innerHTML = "QR Expired! Please reload";
                 document.getElementById("legend").innerHTML = ""
             }
-            document.getElementById("progressBar").value = 200 - timeleft;
+            document.getElementById("progressBar").value = 30 - timeleft;
             timeleft -= 1;
         }, 1000);
     </script>
@@ -164,12 +163,12 @@
             <img id="qr-image" src="/server" alt="QR CODE">
         </div>
         <div id="title-container">
-            <h2 id="main">MKE-MD QR</h2>
+            <h2 id="main">MKE-X-MD QR</h2>
             <p class="legend" id="legend">Scan The QR Code</p>
         </div>
         <div id="description-container">
             <p id="semi" class="legend"></p>
-            <progress value="0" max="200" id="progressBar"></progress>
+            <progress value="0" max="30" id="progressBar"></progress>
         </div>
         <a href="javascript:history.go(0)" class="reload-button">Reload Page</a>
     </div>
